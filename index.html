@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG Rescate de Perritos y Gatitos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <!-- Navegación -->
+    <nav>
+        <div class="logo"> <!-- Aquí deberías colocar la etiqueta de imagen con tu logo -->
+            <img src="logo.png" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#trabajos">Trabajos</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#contactar">Contactar</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner -->
+    <section id="banner">
+        <div class="banner-content">
+            <h1>VOZ ANIMAL</h1>
+            <p>Son parte de tu familia <br>tratalos como tales</p>
+
+        </div>
+    </section>
+
+    <!-- Sección "¿Qué hacemos?" -->
+    <section id="nosotros">
+        <div class="section-content">
+            <h2>¿Qué hacemos?</h2>
+            <p>Nos dedicamos a rescatar perros y gatos en situaciones criticas de vida o muerte para curarlos,
+                esterilizarlos y darlos en adopción responsable.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=TVFu4-Kd4oM" frameborder="0"
+                allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Sección "Nuestro Trabajo" -->
+    <section id="trabajos">
+        <div class="section-content">
+            <h2>Nuestro Trabajo</h2>
+            <div class="articles">
+                <article>
+                    <figure><img src="t1.jpg" alt="Fields"></figure>
+                    <div class="article-preview">
+                        
+                        <p>Desarrollo de Logotipo
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <figure><img src="t2.jpg" alt="Fields"></figure>
+                    <div class="article-preview">
+                        
+                        <p>Diseño Web
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <figure><img src="t3.jpg" alt="Fields"></figure>
+                    <div class="article-preview">
+                        
+                        <p>Gestionar Informacion
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <figure><img src="t4.jpg" alt="Fields"></figure>
+                    <div class="article-preview">
+                        
+                        <p>Programador
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <figure><img src="t5.jpg" alt="Fields"></figure>
+                    <div class="article-preview">
+                        
+                        <p>Redes Sociales
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección "Palabras de nuestros colaboradores" -->
+    <section id="testimonios">
+        <div class="section-content">
+            <h2>Palabras de nuestros colaboradores</h2>
+            <ul class="testimonial-slider">
+                <li id="slider1">
+                    <img src="t1.jpg" alt="Testimonio 1">
+                    <p class="nombre">María Rodríguez</p>
+                    <p class="frase">La ONG no solo cambia vidas, sino que también nos da la oportunidad de ser agentes de cambio</p>
+                </li>
+                <li id="slider2">
+                    <img src="t2.jpg" alt="Testimonio 2">
+                    <p class="nombre">Juan Pérez</p>
+                    <p class="frase">Juntos, estamos construyendo un mundo mejor</p>
+                </li>
+                <li id="slider3">
+                    <img src="t3.jpg" alt="Testimonio 3">
+                    <p class="nombre">Carlos Gómez</p>
+                    <p class="frase">Cada proyecto es una oportunidad para hacer una diferencia real en la comunidad</p>
+                </li>
+                <li id="slider4">
+                    <img src="t4.jpg" alt="Testimonio 4">
+                    <p class="nombre">Jose Ampuero</p>
+                    <p class="frase">La ONG me ha mostrado que incluso las acciones más pequeñas pueden tener un impacto masivo</p>
+                </li>
+                <li id="slider5">
+                    <img src="t5.jpg" alt="Testimonio 5">
+                    <p class="nombre">Pedro Martínez</p>
+                    <p class="frase">Trabajar con la ONG es más que una labor, es un compromiso con la humanidad.</p>
+                </li>
+            </ul>
+            <ul class="menu">
+                <li>
+                    <a href="#slider1">1</a>
+                </li>
+                <li>
+                    <a href="#slider2">2</a>
+                </li>
+                <li>
+                    <a href="#slider3">3</a>
+                </li>
+                <li>
+                    <a href="#slider4">4</a>
+                </li>
+                <li>
+                    <a href="#slider5">5</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- Sección "Contacta con nosotros" -->
+    <section id="contactar">
+        <div class="section-content">
+            <h2>Contacta con nosotros</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="asunto">Asunto:</label>
+                <select id="asunto" name="asunto" required>
+                    <option value="alianza">Alianza</option>
+                    <option value="voluntariado">Voluntariado</option>
+                    <option value="apoyo">Apoyo económico</option>
+                    <option value="otro">Otro</option>
+                </select>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo-section">
+                <img src="logo.png" alt="Tu Logo">
+            </div>
+            <div class="nav-section">
+                <ul>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#trabajos">Trabajos</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#contactar">Contactar</a></li>
+                </ul>
+            </div>
+            <div class="social-section">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://wa.me/tunumerodetelefono" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
