@@ -82,12 +82,13 @@ nav a {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2; 
-
-    background-color: #4CAF50;
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
     color: white;
     padding: 1rem 2rem;
-    
-
+    border-radius: 10px; /* Rounded corners */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    text-align: center; /* Center text alignment */
 }
 
 #banner h1 {
@@ -113,9 +114,12 @@ nav a {
 }
 
 #nosotros .section-content {
-    max-width: 800px;
+    max-width: 80%;
     margin: 0 auto;
-
+    border: 2px solid #333; /* Borde del contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco del contenedor */
 }
 
 #nosotros h2 {
@@ -131,30 +135,18 @@ nav a {
     margin-bottom: 1rem;
 }
 
-#nosotros iframe {
+#nosotros video {
     width: 100%;
-    height: 400px;
-    border: 0; /* Elimina el borde del iframe */
-}
-
-/* Añadir un borde alrededor de la sección para resaltarla */
-#nosotros .section-content {
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 20px;
-    background-color:  #6CD4FF;
-}
-
-/* Efecto de sombra para destacar la sección */
-#nosotros .section-content {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+    border: 0; /* Elimina el borde del video */
+    border-radius: 5px; /* Bordes redondeados del video */
 }
 
 /* Estilos para la sección "Nuestro Trabajo" */
 #trabajos {
-    background-color: #AEF78E;
-    color: black;
-    padding: 50px;
+    background-color: #DADAD9; /* Color de fondo actualizado */
+    color: #333; /* Color de texto oscuro para mejor contraste */
+    padding: 50px 20px; /* Ajuste del relleno para mejor espaciado */
     text-align: center;
 }
 
@@ -163,53 +155,61 @@ nav a {
     margin: 0 auto;
 }
 
-.articles{
+#trabajos h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.articles {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
     justify-content: center;
-    max-width: 1200px;
+    max-width: 100%;
     gap: 1.5rem;
 }
 
-.articles article{
+.articles article {
     max-width: 320px;
     width: 100%;
     cursor: pointer;
     position: relative;
     display: block;
-    transition: all 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
     overflow: hidden;
-    border-radius: 16px;
-    box-shadow: rgba(100, 100, 111, 0.2)
-        0px 7px 29px 0px;
+    border-radius: 12px; /* Bordes redondeados ajustados */
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 16px; /* Sombra más sutil */
 }
 
-
 .articles article img {
-    max-width: 100%;
-    transform-origin: center;
-    transition: transform 0.4s ease-in-out;
+    width: 100%;
     height: 100%;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    object-fit: cover;
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+    transition: transform 0.4s ease-in-out;
 }
 
 .articles article:hover img {
-    transform: scale(1.5);
+    transform: scale(1.1); /* Escala la imagen un poco menos agresiva */
 }
 
 .article-preview {
-    padding: 1.5rem;
+    padding: 1rem; /* Ajuste de relleno */
     background: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 4px; /* Sombra sutil para el preview */
 }
 
-.articles figure{
+.articles figure {
     width: 100%;
     height: 20rem;
     overflow: hidden;
+    margin: 0; /* Elimina margen para un diseño más limpio */
 }
+
 
 /* Menú de navegación */
 .menu {
@@ -252,6 +252,7 @@ nav a {
 .section-content h2 {
     text-align: center;
     margin: 1rem;
+    color: white;
 }
 
 /* Sección "Palabras de nuestros colaboradores" */
@@ -309,14 +310,24 @@ nav a {
 
 /* Sección "Contacta con nosotros" */
 #contactar {
-    background-color: skyblue;
-    color: #333;
-    padding: 50px;
+    background-color: #EDE6E3; /* Color de fondo actualizado */
+    color: #333; /* Color de texto */
+    padding: 50px 20px; /* Ajuste del relleno para mejor espaciado */
 }
 
 #contactar .section-content {
     max-width: 600px;
     margin: 0 auto;
+    background: #fff; /* Fondo blanco para el contenido del formulario */
+    padding: 20px; /* Relleno para el contenido del formulario */
+    border-radius: 8px; /* Bordes redondeados para el contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para el contenedor */
+}
+
+#contactar h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333; /* Color del encabezado */
 }
 
 #contactar form {
@@ -326,22 +337,46 @@ nav a {
 
 #contactar label {
     font-weight: bold;
+    display: block; /* Asegura que las etiquetas ocupen el ancho completo */
+    margin-bottom: 5px; /* Espacio debajo de las etiquetas */
 }
 
-#contactar select,
-#contactar input {
+#contactar input,
+#contactar select {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
+    border: 1px solid #ccc; /* Borde sutil para los campos del formulario */
+    border-radius: 4px; /* Bordes redondeados para los campos */
     box-sizing: border-box;
+    font-size: 1em; /* Tamaño de fuente legible */
+}
+
+#contactar input:focus,
+#contactar select:focus {
+    border-color: #4CAF50; /* Color del borde al enfocar */
+    outline: none; /* Elimina el contorno predeterminado */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para el enfoque */
 }
 
 #contactar button {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+    background-color: #4CAF50; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 12px 20px; /* Relleno para el botón */
+    border: none; /* Elimina el borde predeterminado */
+    border-radius: 4px; /* Bordes redondeados para el botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 1em; /* Tamaño de fuente legible */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
 }
+
+#contactar button:hover {
+    background-color: #45a049; /* Color del botón al pasar el ratón */
+}
+
+#contactar button:active {
+    background-color: #388e3c; /* Color del botón al hacer clic */
+}
+
 
 /* Footer */
 footer {
